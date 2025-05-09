@@ -1,18 +1,59 @@
-## Getting Started
+# Biblioteca MVC
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é uma aplicação de gerenciamento de biblioteca que segue o padrão MVC (Modelo-Visão-Controlador). Ele permite o registro de livros e usuários, o empréstimo e a devolução de livros, além de gerar relatórios sobre as operações realizadas.
 
-## Folder Structure
+## Estrutura do Projeto
 
-The workspace contains two folders by default, where:
+A estrutura do projeto é a seguinte:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+```
+biblioteca-mvc
+├── src
+│   ├── controller
+│   │   ├── LivroController.java
+│   │   ├── UsuarioController.java
+│   │   └── EmprestimoController.java
+│   ├── model
+│   │   ├── Livro.java
+│   │   ├── Usuario.java
+│   │   ├── Emprestimo.java
+│   │   ├── Relatorio.java
+│   │   └── PreCarregamentoDados.java
+│   ├── view
+│   │   └── MenuConsole.java
+│   ├── interfaces
+│   │   └── Organizador.java
+│   └── Main.java
+├── .vscode
+│   ├── launch.json
+│   └── settings.json
+├── README.md
+└── pom.xml
+```
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Funcionalidades
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Registro de Livros**: Permite adicionar novos livros ao sistema.
+- **Busca de Livros**: Possibilita a pesquisa de livros cadastrados.
+- **Registro de Usuários**: Permite adicionar novos usuários ao sistema.
+- **Empréstimo de Livros**: Gerencia o empréstimo de livros para usuários.
+- **Devolução de Livros**: Facilita a devolução de livros emprestados.
+- **Controle de Atrasos**: Monitora devoluções em atraso e gera relatórios.
+- **Geração de Relatórios**: Cria relatórios sobre livros emprestados, devoluções em atraso e livros mais populares.
+- **Pré-Carregamento de Dados**: Carrega dados de teste para facilitar a utilização do sistema.
 
-## Dependency Management
+## Como Executar
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Certifique-se de ter o Java e o Maven instalados em sua máquina.
+2. Clone o repositório ou baixe os arquivos do projeto.
+3. Navegue até o diretório do projeto no terminal.
+4. Execute o comando `mvn clean install` para compilar o projeto.
+5. Utilize o comando `mvn exec:java -Dexec.mainClass="Main"` para iniciar a aplicação.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para melhorias e correções.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
